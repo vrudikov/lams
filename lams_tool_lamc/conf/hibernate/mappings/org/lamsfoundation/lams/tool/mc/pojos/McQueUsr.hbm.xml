@@ -9,6 +9,8 @@
     name="org.lamsfoundation.lams.tool.mc.pojos.McQueUsr" 
     table="tl_lamc11_que_usr"
 >
+
+		<cache usage="transactional" />
     <id
         name="uid"
         type="java.lang.Long"

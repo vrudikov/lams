@@ -16,26 +16,20 @@
     table="lams_theme"
 >
 
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_css_theme_ve"
-    </meta>
+	<cache usage="read-only" />
+
+    
 
 	<!--  Cache it so that is available to the user records -->
-	<cache usage="transactional" />
+	
 
     <id
         name="themeId"
         type="java.lang.Long"
         column="theme_id"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Long"
-            column="theme_ve_id"
-        </meta>
-        <meta attribute="use-in-equals">true</meta>
+        
+        
         <generator class="native" />
     </id>
 
@@ -46,13 +40,8 @@
         not-null="true"
         length="100"
     >
-        <meta attribute="use-in-tostring">true</meta>
-        <meta attribute="field-description">
-           @hibernate.property
-            column="name"
-            length="100"
-            not-null="true"
-        </meta>    
+        
+            
     </property>
     <property
         name="description"
@@ -60,12 +49,8 @@
         column="description"
         length="100"
     >
-        <meta attribute="use-in-tostring">true</meta>
-        <meta attribute="field-description">
-           @hibernate.property
-            column="description"
-            length="100"
-        </meta>    
+        
+            
     </property>
    <property
         name="imageDirectory"
@@ -73,12 +58,8 @@
         column="image_directory"
         length="100"
     >
-        <meta attribute="use-in-tostring">true</meta>
-        <meta attribute="field-description">
-           @hibernate.property
-            column="image_directory"
-            length="100"
-        </meta>    
+        
+            
     </property>
 </class>
 </hibernate-mapping>

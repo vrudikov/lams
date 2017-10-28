@@ -12,6 +12,8 @@
         table="tl_ladaco10_answers"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

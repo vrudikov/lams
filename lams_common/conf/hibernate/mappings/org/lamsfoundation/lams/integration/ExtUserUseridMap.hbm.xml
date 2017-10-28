@@ -12,6 +12,8 @@
         table="lams_ext_user_userid_map"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="sid"
             column="sid"

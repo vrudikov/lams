@@ -10,7 +10,9 @@
         name="org.lamsfoundation.lams.usermanagement.SupportedLocale"
         table="lams_supported_locale"
     >
-		<cache usage="read-only" />
+
+		<cache usage="transactional" />
+		
 
         <id
             name="localeId"

@@ -8,6 +8,8 @@
 	<class name="org.lamsfoundation.lams.learningdesign.LearningDesignAccess"
 		table="lams_learning_design_access">
 
+		<cache usage="transactional" />
+
 		<composite-id>
 			<key-property name="learningDesignId" column="learning_design_id"/>
 			<key-property name="userId" 		  column="user_id"/>

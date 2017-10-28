@@ -11,6 +11,8 @@
         table="lams_comment_session"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

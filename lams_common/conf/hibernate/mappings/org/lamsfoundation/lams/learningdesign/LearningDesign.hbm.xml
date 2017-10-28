@@ -15,8 +15,10 @@
     name="org.lamsfoundation.lams.learningdesign.LearningDesign" 
     table="lams_learning_design"
 >
+
+		<cache usage="transactional" />
     
-    <meta attribute="implement-equals" inherit="false">true</meta>
+    
 
     <id
         name="learningDesignId"
@@ -65,12 +67,7 @@
         not-null="true"
         length="4"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="valid_design_flag"
-            length="4"
-            not-null="true"
-        </meta>    
+            
     </property>
     <property
         name="readOnly"
@@ -94,10 +91,7 @@
         type="java.lang.Boolean"
         column="edit_override_lock"        
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="edit_override_lock"
-        </meta>    
+            
     </property>
     
     <property
@@ -106,10 +100,7 @@
         column="design_version"
         length="11"
     > 
-    	<meta attribute="field-description">
-           @hibernate.property
-            column="design_version"
-        </meta> 
+    	 
     </property>
     
     <property
@@ -144,11 +135,7 @@
         column="version"        
         length="56"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="version"
-            length="56"            
-        </meta>    
+            
     </property>
     
     <property
@@ -160,17 +147,17 @@
         />
     
     <property name="duration" type="java.lang.Long" column="duration">
-    	<meta attribute="field-description">@hibernate.property column ="duration"</meta>
+    	
     </property>
     <property name="licenseText" type="java.lang.String" column="license_text">
-		<meta attribute="field-description">@hibernate.property column ="license_text"</meta>
+		
     </property>
     <property name="lastModifiedDateTime" type ="java.sql.Timestamp" column="last_modified_date_time">
-    	<meta attribute="field-description">@hibernate.property column ="last_modified_date_time"</meta>
+    	
     </property>
 
 	<property name="contentFolderID" type="java.lang.String" column="content_folder_id" length="32">
-		<meta attribute="field-description">@hibernate.property column="content_folder_id" length="32"</meta>
+		
 	</property>
 
     <property
@@ -184,31 +171,28 @@
     
     <!-- bi-directional many-to-one association to License-->  
     <many-to-one name="license" class="org.lamsfoundation.lams.learningdesign.License">
-    	<meta attribute="field-description"> @hibernate.column name="license_id"</meta>
+    	
     	<column name ="license_id"/>
     </many-to-one>
     
     <!-- bi-directional many-to-one association to Activity-->    
     
     <many-to-one name="firstActivity" class="org.lamsfoundation.lams.learningdesign.Activity">
-        <meta attribute="field-description">@hibernate.column name="first_activity_id"         
-      	</meta>
+        
         <column name="first_activity_id" />
     </many-to-one>
     
     <!-- bi-directional many-to-one association to Activity-->    
     
     <many-to-one name="floatingActivity" class="org.lamsfoundation.lams.learningdesign.FloatingActivity">
-        <meta attribute="field-description">@hibernate.column name="floating_activity_id"         
-      	</meta>
+        
         <column name="floating_activity_id" />
     </many-to-one>
     
     <!-- bi-directional many-to-one association to LearningDesign -->
     
     <many-to-one name="originalLearningDesign" class="org.lamsfoundation.lams.learningdesign.LearningDesign">
-        <meta attribute="field-description">@hibernate.column name="original_learning_design_id"         
-      	</meta>
+        
         <column name="original_learning_design_id" />
     </many-to-one>
     			 

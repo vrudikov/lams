@@ -15,25 +15,17 @@
     name="org.lamsfoundation.lams.tool.BasicToolVO" 
     table="lams_tool"
 >
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_tool"
-    </meta>
-    <meta attribute="implement-equals" inherit="false">true</meta>
+
+		<cache usage="read-only" />
+    
+    
 
     <id
         name="toolId"
         type="java.lang.Long"
         column="tool_id"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Long"
-            column="tool_id"
-
-
-        </meta>
+        
         <generator class="native" />
     </id>
 
@@ -44,12 +36,7 @@
         not-null="true"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="learner_url"
-            length="65535"
-            not-null="true"
-        </meta>    
+            
     </property>
     <property
         name="groupingSupportTypeId"
@@ -58,12 +45,7 @@
         not-null="true"
         length="3"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="grouping_support_type_id"
-            length="3"
-            not-null="true"
-        </meta>    
+            
     </property>
     <property
         name="authorUrl"
@@ -71,11 +53,7 @@
         column="author_url"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="author_url"
-            length="65535"
-        </meta>    
+            
     </property>
     
     <property
@@ -85,12 +63,7 @@
         not-null="true"
         length="1"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="valid_flag"
-            length="1"
-            not-null="true"
-        </meta>    
+            
     </property>
         
     <property
@@ -100,12 +73,7 @@
         not-null="false"
         length="20"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="default_tool_content_id"
-            length="20"
-            not-null="false"
-        </meta>    
+            
     </property>
     <property
         name="toolSignature"
@@ -114,12 +82,7 @@
         not-null="true"
         length="64"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="tool_signature"
-            length="64"
-            not-null="true"
-        </meta>    
+            
     </property>
     <property
         name="toolDisplayName"
@@ -128,12 +91,7 @@
         not-null="true"
         length="255"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="tool_display_name"
-            length="255"
-            not-null="true"
-        </meta>    
+            
     </property>
     <property
         name="description"
@@ -141,18 +99,11 @@
         column="description"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="description"
-            length="65535"
-        </meta>    
+            
     </property>
     <property name="createDateTime" type="java.sql.Timestamp"
 			column="create_date_time" not-null="true" length="19">
-			<meta attribute="field-description">
-				@hibernate.property column="create_date_time"
-				length="19" not-null="true"
-			</meta>
+			
 	</property>
     <property
         name="serviceName"
@@ -161,12 +112,7 @@
         not-null="true"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="class_name"
-            length="65535"
-            not-null="true"
-        </meta>    
+            
     </property>
     
     <property
@@ -176,12 +122,7 @@
         not-null="true"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="monitor_url"
-            length="65535"
-            not-null="true"
-        </meta>    
+            
     </property>
 
 </class>

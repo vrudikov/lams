@@ -8,6 +8,8 @@
     name="org.lamsfoundation.lams.tool.mc.pojos.McSession" 
     table="tl_lamc11_session"
 >
+
+		<cache usage="transactional" />
     <id
         name="uid"
         type="java.lang.Long"

@@ -16,25 +16,17 @@
     table="lams_learning_transition"
     discriminator-value="0"
 >
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_learning_transition"
-    </meta>
-    <meta attribute="implement-equals" inherit="false">true</meta>
+
+		<cache usage="transactional" />
+    
+    
  	
     <id
         name="transitionId"
         type="java.lang.Long"
         column="transition_id"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Long"
-            column="transition_id"
-
-
-        </meta>
+        
         <generator class="native" />
     </id>
     
@@ -42,13 +34,13 @@
 	
 	
     <property name="transitionUIID" type="java.lang.Integer" column="transition_ui_id" length="11">
-    	<meta attribute="field-description">@hibernate.property column="transition_ui_id" length="11"</meta>
+    	
     </property>
     <property name="toUIID" type="java.lang.Integer" column="to_ui_id" length="11">
-    	<meta attribute="field-description">@hibernate.property column="to_ui_id" length="11"</meta>
+    	
     </property>
     <property name="fromUIID" type="java.lang.Integer" column="from_ui_id" length="11">
-    	<meta attribute="field-description">@hibernate.property column="from_ui_id" length="11"</meta>
+    	
     </property>
     
     <property
@@ -57,11 +49,7 @@
         column="description"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="description"
-            length="65535"
-        </meta>    
+            
     </property>
     <property
         name="title"
@@ -69,11 +57,7 @@
         column="title"
         length="255"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="title"
-            length="255"
-        </meta>    
+            
     </property>
     <property
         name="createDateTime"
@@ -82,29 +66,20 @@
         not-null="true"
         length="19"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="create_date_time"
-            length="19"
-            not-null="true"
-        </meta>    
+            
     </property>
 
     <!-- Associations -->
   
     <!-- bi-directional many-to-one association to Activity -->
     <many-to-one name="toActivity" class="org.lamsfoundation.lams.learningdesign.Activity" cascade="save-update">
-        <meta attribute="field-description">@hibernate.many-to-one
-        									@hibernate.column name="to_activity_id"         
-        </meta>
+        
         <column name="to_activity_id" />
     </many-to-one>
     
     <!-- bi-directional many-to-one association to Activity -->
     <many-to-one name="fromActivity" class="org.lamsfoundation.lams.learningdesign.Activity" cascade="save-update">
-        <meta attribute="field-description">@hibernate.many-to-one 
-        							        @hibernate.column name="from_activity_id"         
-        </meta>
+        
         <column name="from_activity_id" />
     </many-to-one>
 
@@ -114,19 +89,13 @@
         class="org.lamsfoundation.lams.learningdesign.LearningDesign"
         cascade="save-update"
     >
-        <meta attribute="field-description">
-           @hibernate.many-to-one
-           @hibernate.column name="learning_design_id"         
-        </meta>
+        
         <column name="learning_design_id" />
     </many-to-one>
     
 	<subclass name="org.lamsfoundation.lams.learningdesign.DataTransition" discriminator-value="1">		    
 	    <set name="dataFlowObjects" lazy="true" inverse="true" cascade="all">
-	        <meta attribute="field-description">@hibernate.set lazy="true" cascade="all" sort="org.lamsfoundation.lams.learningdesign.DataFlowObjectComparator"
-   												@hibernate.collection-key column="transition_id"
-  												@hibernate.collection-one-to-many class="org.lamsfoundation.lams.learningdesign.DataFlowObject"
-	        </meta>
+	        
 	        <key><column name="transition_id" /></key>
 	        <one-to-many class="org.lamsfoundation.lams.learningdesign.DataFlowObject"/>
 	    </set>

@@ -4,8 +4,10 @@
 <hibernate-mapping>
 
 <class name="org.lamsfoundation.lams.learningdesign.License"  table="lams_license">
+
+	<cache usage="read-only" />
     
-    <meta attribute="implement-equals" inherit="false">true</meta>
+    
 
     <id name="licenseID" type="java.lang.Long" column="license_id">       
         <generator class="native" />

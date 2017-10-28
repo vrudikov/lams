@@ -15,27 +15,19 @@
     name="org.lamsfoundation.lams.usermanagement.UserOrganisationRole" 
     table="lams_user_organisation_role"
 >
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_user_organisation_role"
-    </meta>
-    <meta attribute="implement-equals" inherit="false">true</meta>
 
-	<cache usage="transactional" />
+		<cache usage="transactional" />
+    
+    
+
+	
 
     <id
         name="userOrganisationRoleId"
         type="java.lang.Integer"
         column="user_organisation_role_id"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Integer"
-            column="user_organisation_role_id"
-
-
-        </meta>
+        
         <generator class="native" />
     </id>
 
@@ -48,12 +40,8 @@
         class="org.lamsfoundation.lams.usermanagement.UserOrganisation"
         not-null="true"
     >
-        <meta attribute="use-in-equals">true</meta>
-        <meta attribute="field-description">
-           @hibernate.many-to-one
-            not-null="true"
-           @hibernate.column name="user_organisation_id"         
-        </meta>
+        
+        
         <column name="user_organisation_id" />
     </many-to-one>
     <!-- bi-directional many-to-one association to Role -->
@@ -62,12 +50,8 @@
         class="org.lamsfoundation.lams.usermanagement.Role"
         not-null="true"
     >
-        <meta attribute="use-in-equals">true</meta>
-        <meta attribute="field-description">
-           @hibernate.many-to-one
-            not-null="true"
-           @hibernate.column name="role_id"         
-        </meta>
+        
+        
         <column name="role_id" />
     </many-to-one>
 

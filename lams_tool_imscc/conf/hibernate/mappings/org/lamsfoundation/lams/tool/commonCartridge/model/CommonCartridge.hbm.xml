@@ -12,6 +12,8 @@
         table="tl_laimsc11_commoncartridge"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

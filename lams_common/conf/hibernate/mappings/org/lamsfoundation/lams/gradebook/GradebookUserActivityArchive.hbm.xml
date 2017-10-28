@@ -12,6 +12,8 @@
         table="lams_gradebook_user_activity_archive"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

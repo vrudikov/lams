@@ -12,6 +12,8 @@
         table="tl_lamind10_node"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="nodeId"
             column="node_id"

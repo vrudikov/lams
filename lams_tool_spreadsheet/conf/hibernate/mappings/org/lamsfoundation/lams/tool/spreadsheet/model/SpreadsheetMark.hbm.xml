@@ -12,6 +12,8 @@
         table="tl_lasprd10_spreadsheet_mark"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

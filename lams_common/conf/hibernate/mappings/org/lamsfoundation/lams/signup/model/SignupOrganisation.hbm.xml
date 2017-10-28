@@ -11,6 +11,8 @@
         table="lams_signup_organisation"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="signupOrganisationId"
             column="signup_organisation_id"

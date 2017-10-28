@@ -12,6 +12,8 @@
         table="lams_notebook_entry"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

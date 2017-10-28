@@ -9,25 +9,18 @@
     name="org.lamsfoundation.lams.tool.SystemTool" 
     table="lams_system_tool"
 >
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_system_tool"
-    </meta>
-    <meta attribute="implement-equals" inherit="false">true</meta>
+
+	<cache usage="read-only" />
+	
+    
+    
 
     <id
         name="systemToolId"
         type="java.lang.Long"
         column="system_tool_id"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Long"
-            column="system_tool_id"
-
-
-        </meta>
+        
         <generator class="native" />
     </id>
 
@@ -37,12 +30,7 @@
         column="learning_activity_type_id"
         not-null="true"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="learning_activity_type_id"
-            type="java.lang.Integer"
-            not-null="true"
-        </meta>    
+            
     </property>
     
     <property
@@ -52,12 +40,7 @@
         not-null="true"
         length="255"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="tool_display_name"
-            length="255"
-            not-null="true"
-        </meta>    
+            
     </property>
     <property
         name="description"
@@ -65,11 +48,7 @@
         column="description"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="description"
-            length="65535"
-        </meta>    
+            
     </property>
     
     <property
@@ -79,12 +58,7 @@
         not-null="true"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="learner_url"
-            length="65535"
-            not-null="true"
-        </meta>    
+            
     </property>
 
     <property
@@ -94,12 +68,7 @@
         not-null="false"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="learner_preview_url"
-            length="65535"
-            not-null="true"
-        </meta>    
+            
     </property>
 
     <property
@@ -109,21 +78,13 @@
         not-null="false"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="learner_progress_url"
-            length="65535"
-            not-null="true"
-        </meta>    
+            
     </property>
 
 
     <property name="createDateTime" type="java.sql.Timestamp"
 			column="create_date_time" not-null="true" length="19">
-			<meta attribute="field-description">
-				@hibernate.property column="create_date_time"
-				length="19" not-null="true"
-			</meta>
+			
 	</property>
  
     <property
@@ -133,12 +94,7 @@
         not-null="false"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="monitor_url"
-            length="65535"
-            not-null="false"
-        </meta>    
+            
     </property>
     
     <property
@@ -148,12 +104,7 @@
         not-null="false"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="contribute_url"
-            length="65535"
-            not-null="false"
-        </meta>    
+            
     </property>
     
     <property
@@ -163,12 +114,7 @@
         not-null="false"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="help_url"
-            length="65535"
-            not-null="false"
-        </meta>    
+            
     </property>
     
     <property
@@ -178,12 +124,7 @@
         not-null="false"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="admin_url"
-            length="65535"
-            not-null="false"
-        </meta>    
+            
     </property>
     
    <property
@@ -193,12 +134,7 @@
         not-null="false"
         length="65535"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="pedagogical_planner_url"
-            length="65535"
-            not-null="false"
-        </meta>    
+            
     </property>
     
     

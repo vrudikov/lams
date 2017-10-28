@@ -12,6 +12,8 @@
         table="tl_lasbmt11_session"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="sessionID"
             column="session_id"

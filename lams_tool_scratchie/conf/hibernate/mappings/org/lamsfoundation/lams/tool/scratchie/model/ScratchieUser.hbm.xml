@@ -12,6 +12,8 @@
         table="tl_lascrt11_user"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

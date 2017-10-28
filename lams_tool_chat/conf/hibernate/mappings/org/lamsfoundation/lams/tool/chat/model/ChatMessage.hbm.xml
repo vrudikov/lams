@@ -12,6 +12,8 @@
         table="tl_lachat11_message"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

@@ -12,6 +12,8 @@
         table="lams_notification_event"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

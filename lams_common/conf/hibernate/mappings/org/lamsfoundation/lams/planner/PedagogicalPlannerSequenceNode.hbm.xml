@@ -12,6 +12,8 @@
         table="lams_planner_nodes"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

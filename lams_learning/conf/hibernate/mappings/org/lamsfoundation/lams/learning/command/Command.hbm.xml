@@ -11,6 +11,8 @@
         table="lams_learning_command"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

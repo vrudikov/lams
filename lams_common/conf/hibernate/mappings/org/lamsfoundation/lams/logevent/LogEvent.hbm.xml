@@ -12,6 +12,8 @@
         table="lams_log_event"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="id"
             column="id"

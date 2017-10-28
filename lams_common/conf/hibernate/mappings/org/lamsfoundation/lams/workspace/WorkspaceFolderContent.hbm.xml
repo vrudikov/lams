@@ -5,7 +5,9 @@
     
 <hibernate-mapping>
 	<class name="org.lamsfoundation.lams.workspace.WorkspaceFolderContent" table="lams_workspace_folder_content">
-		<meta attribute="implement-equals" inherit="false">true</meta>
+
+		<cache usage="transactional" />
+		
 
 		<id name="folderContentID" 
 			column="folder_content_id"

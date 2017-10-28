@@ -7,6 +7,8 @@
 	<class name="org.lamsfoundation.lams.lesson.LearnerProgressArchive"
 		table="lams_learner_progress_archive">
 
+		<cache usage="transactional" />
+
 		<id name="learnerProgressId" type="java.lang.Long"
 			column="learner_progress_id">
 			<generator class="native" />

@@ -12,6 +12,8 @@
         table="tl_lascrt11_burning_que_like"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

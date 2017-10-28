@@ -11,7 +11,9 @@
         name="org.lamsfoundation.lams.planner.PedagogicalPlannerActivityMetadata"
         table="lams_planner_activity_metadata"
     >
-        <cache usage="transactional" />
+
+		<cache usage="transactional" />
+        
 
         <id
             name="id"

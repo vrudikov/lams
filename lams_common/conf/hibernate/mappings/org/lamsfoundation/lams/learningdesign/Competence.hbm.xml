@@ -12,6 +12,8 @@
         table="lams_competence"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="competenceId"
             column="competence_id"

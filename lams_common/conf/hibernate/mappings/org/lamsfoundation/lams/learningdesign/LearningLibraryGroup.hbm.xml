@@ -12,6 +12,8 @@
         table="lams_learning_library_group"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="groupId"
             column="group_id"

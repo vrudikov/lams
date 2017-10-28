@@ -9,6 +9,8 @@
     name="org.lamsfoundation.lams.tool.qa.QaUsrResp" 
     table="tl_laqa11_usr_resp"
 >
+
+		<cache usage="transactional" />
     <id
         name="responseId"
         type="java.lang.Long"

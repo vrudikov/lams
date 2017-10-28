@@ -15,25 +15,17 @@
     name="org.lamsfoundation.lams.integration.ExtCourseClassMap" 
     table="lams_ext_course_class_map"
 >
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_ext_course_class_map"
-    </meta>
+
+		<cache usage="transactional" />
+    
 
     <id
         name="sid"
         type="java.lang.Integer"
         column="sid"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Integer"
-            column="sid"
-
-
-        </meta>
-        <meta attribute="use-in-equals">true</meta>
+        
+        
         <generator class="native" />
     </id>
 
@@ -44,13 +36,8 @@
         not-null="true"
         length="255"
     >
-        <meta attribute="use-in-tostring">true</meta>
-        <meta attribute="field-description">
-           @hibernate.property
-            column="courseid"
-            length="255"
-            not-null="true"
-        </meta>    
+        
+            
     </property>
 
     <!-- Associations -->
@@ -61,11 +48,7 @@
         class="org.lamsfoundation.lams.integration.ExtServer"
         not-null="true"
     >
-        <meta attribute="field-description">
-           @hibernate.many-to-one
-            not-null="true"
-           @hibernate.column name="ext_server_org_map_id"         
-        </meta>
+        
         <column name="ext_server_org_map_id" />
     </many-to-one>
     <!-- bi-directional many-to-one association to Organisation -->
@@ -74,11 +57,7 @@
         class="org.lamsfoundation.lams.usermanagement.Organisation"
         not-null="true"
     >
-        <meta attribute="field-description">
-           @hibernate.many-to-one
-            not-null="true"
-           @hibernate.column name="classid"         
-        </meta>
+        
         <column name="classid" />
     </many-to-one>
 

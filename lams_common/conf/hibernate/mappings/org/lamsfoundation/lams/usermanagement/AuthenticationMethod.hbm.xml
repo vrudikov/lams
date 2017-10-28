@@ -15,28 +15,20 @@
     name="org.lamsfoundation.lams.usermanagement.AuthenticationMethod" 
     table="lams_authentication_method"
 >
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_authentication_method"
-    </meta>
-    <meta attribute="implement-equals" inherit="false">true</meta>
 
-	<cache usage="read-only" />
+		<cache usage="read-only" />
+    
+    
+
+	
 
     <id
         name="authenticationMethodId"
         type="java.lang.Integer"
         column="authentication_method_id"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Integer"
-            column="authentication_method_id"
-
-
-        </meta>
-        <meta attribute="use-in-equals">true</meta>
+        
+        
         <generator class="native" />
     </id>
 
@@ -48,13 +40,7 @@
         unique="true"
         length="64"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="authentication_method_name"
-            unique="true"
-            length="64"
-            not-null="true"
-        </meta>    
+            
     </property>
 
     <!-- Associations -->
@@ -66,12 +52,7 @@
         not-null="true"
         lazy="false"
     >
-        <meta attribute="field-description">
-           @hibernate.many-to-one
-	        lazy="false"
-            not-null="true"
-           @hibernate.column name="authentication_method_type_id"         
-        </meta>
+        
         <column name="authentication_method_type_id" />
     </many-to-one>
     <!-- bi-directional one-to-many association to User -->
@@ -81,18 +62,7 @@
         inverse="true"
 		cascade="none"
     >
-        <meta attribute="field-description">
-           @hibernate.set
-            lazy="true"
-            inverse="true"
-            cascade="none"
-
-           @hibernate.collection-key
-            column="authentication_method_id"
-
-           @hibernate.collection-one-to-many
-            class="org.lamsfoundation.lams.usermanagement.User"
-        </meta>
+        
         <key>
             <column name="authentication_method_id" />
         </key>

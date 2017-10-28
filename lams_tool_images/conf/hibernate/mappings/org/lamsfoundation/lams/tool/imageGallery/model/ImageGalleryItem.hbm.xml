@@ -12,6 +12,8 @@
         table="tl_laimag10_imagegallery_item"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

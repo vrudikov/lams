@@ -12,6 +12,8 @@
         table="tl_lagmap10_gmap"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

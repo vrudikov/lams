@@ -12,6 +12,8 @@
         table="tl_laimag10_image_vote"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

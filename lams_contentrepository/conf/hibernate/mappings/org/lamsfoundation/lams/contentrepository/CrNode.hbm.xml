@@ -11,7 +11,9 @@
         name="org.lamsfoundation.lams.contentrepository.CrNode"
         table="lams_cr_node"
     >
-        <cache usage="transactional" />
+
+		<cache usage="transactional" />
+        
 
         <id
             name="nodeId"

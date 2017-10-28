@@ -12,6 +12,8 @@
         table="tl_lasbmt11_report"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="reportID"
             column="report_id"

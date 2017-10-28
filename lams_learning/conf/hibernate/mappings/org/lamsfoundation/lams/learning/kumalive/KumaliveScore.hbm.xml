@@ -6,6 +6,8 @@
 <hibernate-mapping>
 	<class name="org.lamsfoundation.lams.learning.kumalive.model.KumaliveScore" table="lams_kumalive_score">
 
+		<cache usage="transactional" />
+
 		<id name="scoreId" type="java.lang.Long" column="score_id">
 			<generator class="native" />
 		</id>

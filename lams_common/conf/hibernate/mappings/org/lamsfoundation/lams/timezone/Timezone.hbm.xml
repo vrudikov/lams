@@ -12,6 +12,8 @@
         table="lams_timezone"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="id"
             column="id"

@@ -12,6 +12,8 @@
         table="tl_lascrt11_scratchie_answer"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

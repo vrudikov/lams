@@ -12,6 +12,8 @@
         table="lams_presence_chat_msgs"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

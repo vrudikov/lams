@@ -12,6 +12,8 @@
         table="lams_presence_user"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="nickname"
             column="nickname"

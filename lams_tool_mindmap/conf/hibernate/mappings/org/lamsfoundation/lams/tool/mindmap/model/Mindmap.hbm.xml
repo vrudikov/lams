@@ -12,6 +12,8 @@
         table="tl_lamind10_mindmap"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

@@ -12,6 +12,8 @@
         table="tl_laimag10_configuration"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="id"
             column="uid"

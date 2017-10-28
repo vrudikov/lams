@@ -9,7 +9,9 @@
 	<class name="org.lamsfoundation.lams.lesson.Lesson"
 		table="lams_lesson">
 
-		<meta attribute="implement-equals" inherit="false">true</meta>
+		<cache usage="transactional" />
+
+		
 
 		<id name="lessonId" type="java.lang.Long" column="lesson_id">
 			<generator class="native" />

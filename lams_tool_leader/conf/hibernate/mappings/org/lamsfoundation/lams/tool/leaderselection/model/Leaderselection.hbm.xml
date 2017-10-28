@@ -12,6 +12,8 @@
         table="tl_lalead11_leaderselection"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

@@ -10,6 +10,8 @@
         name="org.lamsfoundation.lams.learningdesign.ActivityEvaluation"
         table="lams_activity_evaluation"
     >
+
+		<cache usage="transactional" />
         <id
             name="activityId"
             column="activity_id"

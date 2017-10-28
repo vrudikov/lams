@@ -12,6 +12,8 @@
         table="tl_lasbmt11_content"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="contentID"
             column="content_id"

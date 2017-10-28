@@ -9,27 +9,19 @@
     name="org.lamsfoundation.lams.usermanagement.FavoriteOrganisation" 
     table="lams_favorite_organisation"
 >
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_favorite_organisation"
-    </meta>
-    <meta attribute="implement-equals" inherit="false">true</meta>
 
-	<cache usage="transactional" />
+		<cache usage="transactional" />
+    
+    
+
+	
 	
     <id
         name="favoriteOrganisationId"
         type="java.lang.Integer"
         column="favorite_organisation_id"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Integer"
-            column="favorite_organisation_id"
-
-
-        </meta>
+        
         <generator class="native" />
     </id>
 
@@ -41,12 +33,8 @@
         class="org.lamsfoundation.lams.usermanagement.User"
         not-null="true"
     >
-        <meta attribute="use-in-equals">true</meta>
-        <meta attribute="field-description">
-           @hibernate.many-to-one
-            not-null="true"
-           @hibernate.column name="user_id"         
-        </meta>
+        
+        
         <column name="user_id" />
     </many-to-one>
     
@@ -56,12 +44,8 @@
         class="org.lamsfoundation.lams.usermanagement.Organisation"
         not-null="true"
     >
-        <meta attribute="use-in-equals">true</meta>
-        <meta attribute="field-description">
-           @hibernate.many-to-one
-            not-null="true"
-           @hibernate.column name="organisation_id"         
-        </meta>
+        
+        
         <column name="organisation_id" />
     </many-to-one>
 

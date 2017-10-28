@@ -11,6 +11,8 @@
         table="lams_rating"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

@@ -12,6 +12,8 @@
         table="tl_larsrc11_item_instruction"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

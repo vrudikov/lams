@@ -12,6 +12,8 @@
         table="lams_ext_server_lesson_map"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

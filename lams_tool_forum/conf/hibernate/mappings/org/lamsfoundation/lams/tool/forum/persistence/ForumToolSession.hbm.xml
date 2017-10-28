@@ -11,7 +11,9 @@
         name="org.lamsfoundation.lams.tool.forum.persistence.ForumToolSession"
         table="tl_lafrum11_tool_session"
     >
-        <cache usage="transactional" />
+
+		<cache usage="transactional" />
+        
 
         <id
             name="uid"

@@ -11,7 +11,9 @@
         name="org.lamsfoundation.lams.tool.forum.persistence.Attachment"
         table="tl_lafrum11_attachment"
     >
-        <cache usage="transactional" />
+
+		<cache usage="transactional" />
+        
 
         <id
             name="uid"

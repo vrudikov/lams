@@ -11,7 +11,9 @@
         name="org.lamsfoundation.lams.tool.forum.persistence.Timestamp"
         table="tl_lafrum11_timestamp"
     >
-        <cache usage="transactional" />
+
+		<cache usage="transactional" />
+        
 
         <id
             name="uid"

@@ -12,6 +12,8 @@
         table="lams_data_flow"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="dataFlowObjectId"
             column="data_flow_object_id"

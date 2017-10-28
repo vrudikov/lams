@@ -11,6 +11,8 @@
         table="lams_ext_server_org_map"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="sid"
             column="sid"

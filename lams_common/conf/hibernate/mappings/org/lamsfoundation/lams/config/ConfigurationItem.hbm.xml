@@ -12,6 +12,8 @@
         table="lams_configuration"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="key"
             column="config_key"

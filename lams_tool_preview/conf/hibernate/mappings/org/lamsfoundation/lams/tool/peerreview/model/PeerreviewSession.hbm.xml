@@ -11,6 +11,8 @@
         table="tl_laprev11_session"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

@@ -12,6 +12,8 @@
         table="tl_laimsc11_session"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

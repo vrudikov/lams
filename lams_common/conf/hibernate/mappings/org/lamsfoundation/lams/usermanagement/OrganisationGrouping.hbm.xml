@@ -12,6 +12,8 @@
         table="lams_organisation_grouping"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="groupingId"
             column="grouping_id"

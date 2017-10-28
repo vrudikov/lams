@@ -7,6 +7,8 @@
 	<class name="org.lamsfoundation.lams.learning.kumalive.model.KumaliveRubric"
 		table="lams_kumalive_rubric">
 
+		<cache usage="transactional" />
+
 		<id name="rubricId" type="java.lang.Long" column="rubric_id">
 			<generator class="native" />
 		</id>

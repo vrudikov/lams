@@ -12,6 +12,8 @@
         table="tl_lascrt11_answer_log"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="uid"
             column="uid"

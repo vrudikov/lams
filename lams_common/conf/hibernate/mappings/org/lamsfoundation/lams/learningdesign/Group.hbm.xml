@@ -15,25 +15,17 @@
     name="org.lamsfoundation.lams.learningdesign.Group" 
     table="lams_group"
 >
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_group"
-    </meta>
-    <meta attribute="implement-equals" inherit="false">true</meta>
+
+		<cache usage="transactional" />
+    
+    
 
     <id
         name="groupId"
         type="java.lang.Long"
         column="group_id"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Long"
-            column="group_id"
-
-
-        </meta>
+        
         <generator class="native" />
     </id>
 
@@ -44,10 +36,7 @@
         not-null="false"
         length="255"
     >
-        <meta attribute="field-description">
-			@hibernate.property
-			column="group_name"
-         </meta>    
+            
     </property>
     
     <property
@@ -57,16 +46,11 @@
         not-null="true"
         length="6"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="order_id"
-            length="6"
-            not-null="true"
-        </meta>    
+            
     </property>
 
     <property name="groupUIID" type="java.lang.Integer" column="group_ui_id" length="11">
-				        <meta attribute="field-description">@hibernate.property column="group_ui_id" length="11"</meta>    
+				            
 	</property>				
 
     <!-- Associations -->
@@ -95,18 +79,7 @@
 		cascade="none"
         batch-size="20"
     >
-        <meta attribute="field-description">
-           @hibernate.set
-            lazy="true"
-            inverse="true"
-            cascade="none"
-
-           @hibernate.collection-key
-            column="group_id"
-
-           @hibernate.collection-one-to-many
-            class="org.lamsfoundation.lams.tool.ToolSession"
-        </meta>
+        
         <key>
             <column name="group_id" />
         </key>
@@ -122,11 +95,7 @@
         update="false"
         cascade="none"
     >
-        <meta attribute="field-description">
-           @hibernate.many-to-one
-            not-null="true"
-           @hibernate.column name="grouping_id"         
-        </meta>
+        
         <column name="grouping_id" />
     </many-to-one>
 

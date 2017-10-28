@@ -7,6 +7,8 @@
 
 <class name="org.lamsfoundation.lams.learningdesign.LearningDesignAnnotation" table="lams_learning_design_annotation">
 
+		<cache usage="transactional" />
+
     <id name="uid" type="java.lang.Long" column="uid">
         <generator class="native" />
     </id>

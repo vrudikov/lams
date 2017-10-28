@@ -11,7 +11,9 @@
         name="org.lamsfoundation.lams.contentrepository.CrNodeVersionProperty"
         table="lams_cr_node_version_property"
     >
-        <cache usage="transactional" />
+
+		<cache usage="transactional" />
+        
 
         <id
             name="id"

@@ -12,6 +12,8 @@
         table="lams_organisation_group"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="groupId"
             column="group_id"

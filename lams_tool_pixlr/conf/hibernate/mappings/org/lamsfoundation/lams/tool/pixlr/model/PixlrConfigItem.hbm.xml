@@ -12,6 +12,8 @@
         table="tl_lapixl10_configuration"
     >
 
+		<cache usage="transactional" />
+
         <id
             name="id"
             column="uid"

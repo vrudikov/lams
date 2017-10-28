@@ -13,17 +13,14 @@
 
 	<class name="org.lamsfoundation.lams.tool.ToolSession"
 		table="lams_tool_session" discriminator-value="0">
-		<meta attribute="class-description" inherit="false">
-			@hibernate.class table="lams_tool_session"
-		</meta>
-		<meta attribute="implement-equals" inherit="false">true</meta>
+
+		<cache usage="transactional" />
+		
+		
 
 		<id name="toolSessionId" type="java.lang.Long"
 			column="tool_session_id">
-			<meta attribute="field-description">
-				@hibernate.id generator-class="native"
-				type="java.lang.Long" column="tool_session_id"
-			</meta>
+			
 			<generator class="native" />
 		</id>
 
@@ -45,10 +42,7 @@
 
 		<property name="createDateTime" type="java.sql.Timestamp"
 			column="create_date_time" not-null="true" length="19">
-			<meta attribute="field-description">
-				@hibernate.property column="create_date_time"
-				length="19" not-null="true"
-			</meta>
+			
 		</property>
 
 		<property name="toolSessionStateId" type="int"

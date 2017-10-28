@@ -15,28 +15,20 @@
     name="org.lamsfoundation.lams.usermanagement.AuthenticationMethodType" 
     table="lams_auth_method_type"
 >
-    <meta attribute="class-description" inherit="false">
-       @hibernate.class
-        table="lams_auth_method_type"
-    </meta>
-    <meta attribute="implement-equals" inherit="false">true</meta>
 
-	<cache usage="read-only" />
+		<cache usage="read-only" />
+    
+    
+
+	
 
     <id
         name="authenticationMethodTypeId"
         type="java.lang.Integer"
         column="authentication_method_type_id"
     >
-        <meta attribute="field-description">
-           @hibernate.id
-            generator-class="native"
-            type="java.lang.Integer"
-            column="authentication_method_type_id"
-
-
-        </meta>
-        <meta attribute="use-in-equals">true</meta>
+        
+        
         <generator class="native" />
     </id>
 
@@ -47,12 +39,7 @@
         not-null="true"
         length="64"
     >
-        <meta attribute="field-description">
-           @hibernate.property
-            column="description"
-            length="64"
-            not-null="true"
-        </meta>    
+            
     </property>
 
     <!-- Associations -->
@@ -64,18 +51,7 @@
         inverse="true"
 		cascade="none"
     >
-        <meta attribute="field-description">
-           @hibernate.set
-            lazy="true"
-            inverse="true"
-            cascade="none"
-
-           @hibernate.collection-key
-            column="authentication_method_type_id"
-
-           @hibernate.collection-one-to-many
-            class="org.lamsfoundation.lams.usermanagement.AuthenticationMethod"
-        </meta>
+        
         <key>
             <column name="authentication_method_type_id" />
         </key>

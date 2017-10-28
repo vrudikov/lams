@@ -15,8 +15,10 @@
     name="org.lamsfoundation.lams.learningdesign.LearningLibrary" 
     table="lams_learning_library"
 >
+
+		<cache usage="transactional" />
  
-    <meta attribute="implement-equals" inherit="false">true</meta>
+    
 
     <id
         name="learningLibraryId"
