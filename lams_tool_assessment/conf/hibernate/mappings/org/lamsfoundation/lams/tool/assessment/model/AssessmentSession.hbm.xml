@@ -87,6 +87,8 @@
             sort="unsorted"
             order-by="create_date desc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="session_uid"
@@ -107,6 +109,8 @@
             sort="unsorted"
             order-by="last_name asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="session_uid"

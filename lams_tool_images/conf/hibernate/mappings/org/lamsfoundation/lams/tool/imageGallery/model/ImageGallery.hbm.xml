@@ -93,6 +93,8 @@
             sort="unsorted"
             order-by="create_date desc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="imageGallery_uid"
@@ -178,6 +180,8 @@
             sort="unsorted"
             order-by="order_id asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="tool_content_id"

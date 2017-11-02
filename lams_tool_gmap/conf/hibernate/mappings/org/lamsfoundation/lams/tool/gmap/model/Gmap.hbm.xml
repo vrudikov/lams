@@ -114,6 +114,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="gmap_uid"
@@ -132,6 +134,8 @@
             cascade="all-delete-orphan"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="gmap_uid"

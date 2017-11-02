@@ -110,6 +110,8 @@
             cascade="all"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="result_uid"

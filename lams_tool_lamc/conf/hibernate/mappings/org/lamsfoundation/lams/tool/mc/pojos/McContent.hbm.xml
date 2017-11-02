@@ -187,6 +187,8 @@
             cascade="all"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
               <key
                   column="mc_content_id"
               >
@@ -205,6 +207,8 @@
             cascade="all-delete-orphan"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
               <key
                   column="mc_content_id"
               >

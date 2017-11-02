@@ -57,6 +57,8 @@
         inverse="true"
 		cascade="delete-orphan"
     >
+    <cache usage="transactional" />
+
         
         <key>
             <column name="privilege_id" />

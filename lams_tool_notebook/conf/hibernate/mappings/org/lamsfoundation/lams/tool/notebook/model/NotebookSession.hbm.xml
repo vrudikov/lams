@@ -91,6 +91,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="notebook_session_uid"

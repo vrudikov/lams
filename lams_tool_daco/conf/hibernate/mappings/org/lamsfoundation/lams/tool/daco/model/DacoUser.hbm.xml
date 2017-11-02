@@ -102,6 +102,8 @@
             order-by="record_id asc, uid asc"
             fetch="join"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="user_uid"

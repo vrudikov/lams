@@ -44,6 +44,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="condition_uid"

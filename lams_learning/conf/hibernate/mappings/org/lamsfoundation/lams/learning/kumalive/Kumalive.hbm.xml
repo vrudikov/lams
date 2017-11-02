@@ -27,6 +27,8 @@
 		</many-to-one>
 		
 		<set name="rubrics" table="lams_kumalive_rubric" lazy="false" order-by="orderId asc">
+    <cache usage="transactional" />
+
     		<key column="kumalive_id"/>
     		<one-to-many class="org.lamsfoundation.lams.learning.kumalive.model.KumaliveRubric" />
 		</set>

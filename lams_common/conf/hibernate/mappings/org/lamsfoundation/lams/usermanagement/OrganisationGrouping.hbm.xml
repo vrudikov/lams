@@ -51,6 +51,8 @@
             cascade="all-delete-orphan"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="grouping_id"

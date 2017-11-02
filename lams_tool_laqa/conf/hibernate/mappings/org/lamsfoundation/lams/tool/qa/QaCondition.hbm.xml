@@ -22,6 +22,8 @@
 	            sort="unsorted"
 	            order-by="question_uid asc"
 	     >
+    <cache usage="transactional" />
+
 	
 	            <key
 	                column="condition_id"

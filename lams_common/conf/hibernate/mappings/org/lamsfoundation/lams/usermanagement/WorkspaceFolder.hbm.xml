@@ -48,6 +48,8 @@
 		<!-- bi-directional one-to-many association to WorkspaceFolder -->
 		<set name="childWorkspaceFolders" lazy="true" inverse="true"
 			cascade="none">
+    <cache usage="transactional" />
+
 			
 			<key>
 				<column name="parent_folder_id" />
@@ -63,6 +65,8 @@
 
 		<!-- bi-directional one-to-many association to LearningDesign -->
 		<set name="learningDesigns" lazy="true" inverse="true" cascade="none">
+    <cache usage="transactional" />
+
 			
 			<key>
 				<column name="workspace_folder_id" />
@@ -72,6 +76,8 @@
 
 		<!-- bi-directional one-to-many association to WorkspaceFolderContent -->
 		<set name="folderContent" lazy="true" inverse="true" cascade="delete">
+    <cache usage="transactional" />
+
 			<key>
 				<column name="workspace_folder_id" />
 			</key>

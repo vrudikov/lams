@@ -40,6 +40,8 @@
     
     <!-- bi-directional one-to-many association to Group-->
     <set name="groups" lazy="false" inverse="true" cascade="all-delete-orphan" batch-size="10">
+    <cache usage="transactional" />
+
     	
         <key><column name="grouping_id" /></key>
         <one-to-many class="org.lamsfoundation.lams.learningdesign.Group"/>        
@@ -52,6 +54,8 @@
         inverse="true"
 		cascade="none"
     >
+    <cache usage="transactional" />
+
         <key>
             <column name="grouping_id" />
         </key>

@@ -91,6 +91,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="gmap_session_uid"

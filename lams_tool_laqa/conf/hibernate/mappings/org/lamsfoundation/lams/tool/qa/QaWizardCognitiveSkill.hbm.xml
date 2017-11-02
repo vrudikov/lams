@@ -56,6 +56,8 @@
             sort="unsorted"
             order-by="uid asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="cognitive_skill_uid"

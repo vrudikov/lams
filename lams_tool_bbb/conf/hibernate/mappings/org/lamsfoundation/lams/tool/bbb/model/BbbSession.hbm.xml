@@ -92,6 +92,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="bbb_session_uid"

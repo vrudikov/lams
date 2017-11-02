@@ -76,6 +76,8 @@
             sort="unsorted"
             order-by="uid asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="wiki_page_uid"

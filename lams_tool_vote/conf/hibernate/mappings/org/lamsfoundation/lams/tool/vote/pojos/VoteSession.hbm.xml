@@ -91,6 +91,8 @@
         cascade="all-delete-orphan"
         sort="unsorted"
     >
+    <cache usage="transactional" />
+
         <key>
         	<column name="vote_session_id" />
    		</key>

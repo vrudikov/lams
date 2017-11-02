@@ -91,6 +91,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="wiki_session_uid"
@@ -111,6 +113,8 @@
             sort="unsorted"
             order-by="uid asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="wiki_session_uid"

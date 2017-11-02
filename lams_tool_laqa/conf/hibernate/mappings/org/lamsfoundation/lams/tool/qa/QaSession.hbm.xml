@@ -84,6 +84,8 @@
         cascade="all-delete-orphan"
         sort="unsorted"
     >
+    <cache usage="transactional" />
+
         <key>
         	<column name="qa_session_id" />
    		</key>

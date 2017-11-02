@@ -49,6 +49,8 @@
         inverse="true"
 		cascade="none"
     >
+    <cache usage="transactional" />
+
         
         <key>
             <column name="organisation_state_id" />

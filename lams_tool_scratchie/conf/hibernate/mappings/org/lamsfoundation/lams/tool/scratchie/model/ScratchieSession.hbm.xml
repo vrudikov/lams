@@ -95,6 +95,8 @@
             sort="unsorted"
             order-by="create_date desc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="session_uid"

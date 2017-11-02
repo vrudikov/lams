@@ -388,6 +388,10 @@
                     <transaction mode="NON_XA" locking="OPTIMISTIC"/>
                     <expiration max-idle="1800000"/>
                 </local-cache>
+                <local-cache name="collection" statistics-enabled="false">
+                    <transaction mode="NON_XA" locking="OPTIMISTIC"/>
+                    <expiration max-idle="1800000"/>
+                </local-cache>
                 <local-cache name="timestamps"/>
             </cache-container>
         </subsystem>

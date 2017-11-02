@@ -188,6 +188,8 @@
         sort="unsorted"
         order-by="order_id asc"
      >
+    <cache usage="transactional" />
+
 
         <key
             column="tool_content_id"
@@ -223,6 +225,8 @@
             cascade="all"
             order-by="display_order"
         >
+    <cache usage="transactional" />
+
               <key
                   column="qa_content_id"
               >
@@ -240,6 +244,8 @@
             cascade="all-delete-orphan"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
               <key
                   column="qa_content_id"
               >
@@ -258,6 +264,8 @@
             cascade="all"
             sort="org.lamsfoundation.lams.learningdesign.TextSearchConditionComparator"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="content_uid"

@@ -189,6 +189,8 @@
             sort="unsorted"
             order-by="sequence_id asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="question_uid"
@@ -208,6 +210,8 @@
             sort="unsorted"
             order-by="sequence_id asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="question_uid"

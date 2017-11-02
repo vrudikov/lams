@@ -81,6 +81,8 @@
         cascade="all-delete-orphan"
         sort="unsorted"
     >
+    <cache usage="transactional" />
+
         <key>
         	<column name="mc_session_id" />
    		</key>

@@ -95,6 +95,8 @@
             sort="unsorted"
             order-by="create_date desc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="forum_uid"
@@ -266,6 +268,8 @@
             cascade="all"
             sort="org.lamsfoundation.lams.learningdesign.TextSearchConditionComparator"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="content_uid"

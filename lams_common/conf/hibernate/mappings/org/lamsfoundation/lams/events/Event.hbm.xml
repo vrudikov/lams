@@ -85,6 +85,8 @@
             sort="unsorted"
             fetch="join"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="event_uid"

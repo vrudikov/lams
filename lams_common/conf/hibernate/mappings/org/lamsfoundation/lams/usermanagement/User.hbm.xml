@@ -120,6 +120,8 @@
 		</many-to-one>
 		<!-- bi-directional one-to-many association to UserOrganisation -->
 		<set name="userOrganisations" inverse="true" cascade="all-delete-orphan">
+    <cache usage="transactional" />
+
 			
 
 			<key>
@@ -145,6 +147,8 @@
 
 		<!-- bi-directional one-to-many association to LearnerProgress -->
 		<set name="learnerProgresses" lazy="extra" inverse="true" cascade="none">
+    <cache usage="transactional" />
+
 			
 			<key>
 				<column name="user_id" />
@@ -155,6 +159,8 @@
 
 		<!-- bi-directional one-to-many association to LearningDesign -->
 		<set name="learningDesigns" lazy="true" inverse="true" cascade="none">
+    <cache usage="transactional" />
+
 			
 			<key>
 				<column name="user_id" />
@@ -164,6 +170,8 @@
 
 		<!-- bi-directional one-to-many association to Lesson -->
 		<set name="lessons" lazy="true" inverse="true" cascade="none">
+    <cache usage="transactional" />
+
 			
 			<key>
 				<column name="user_id" />
@@ -207,6 +215,8 @@
 		<set name="recentlyModifiedLearningDesigns" table="lams_planner_recent_learning_designs"
 			lazy="true" inverse="false" cascade="all-delete-orphan" sort="unsorted"
 			order-by="last_modified_date DESC">
+    <cache usage="transactional" />
+
 
 			<key column="user_id"></key>
 
@@ -215,6 +225,8 @@
 
 		<set name="pagesWithDisabledTutorials" lazy="false"
 			table="lams_user_disabled_tutorials" cascade="all-delete-orphan">
+    <cache usage="transactional" />
+
 			<key>
 				<column name="user_id" />
 			</key>

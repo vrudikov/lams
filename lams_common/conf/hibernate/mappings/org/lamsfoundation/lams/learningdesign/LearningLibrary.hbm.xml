@@ -69,6 +69,8 @@
         inverse="true"
 		cascade="none"
     >
+    <cache usage="transactional" />
+
         
         <key>
             <column name="learning_library_id" />

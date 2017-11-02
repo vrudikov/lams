@@ -76,6 +76,8 @@
             sort="unsorted"
             order-by="order_id asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="scratchie_item_uid"

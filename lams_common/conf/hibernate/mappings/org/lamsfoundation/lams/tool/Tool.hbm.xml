@@ -238,6 +238,8 @@
         inverse="true"
 		cascade="none"
     >
+    <cache usage="transactional" />
+
         
         <key>
             <column name="tool_id" />
@@ -253,6 +255,8 @@
     	inverse="false" 
     	cascade="none" 
     	sort="unsorted" >
+    <cache usage="transactional" />
+
     	
 		<key column="tool_id"></key>
 		<one-to-many class="org.lamsfoundation.lams.integration.ExtServerToolAdapterMap"/>

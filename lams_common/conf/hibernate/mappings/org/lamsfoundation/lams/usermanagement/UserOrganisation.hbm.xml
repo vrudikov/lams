@@ -49,6 +49,8 @@
         inverse="true"
 		cascade="all-delete-orphan"
     >
+    <cache usage="transactional" />
+
         
         
         <key>

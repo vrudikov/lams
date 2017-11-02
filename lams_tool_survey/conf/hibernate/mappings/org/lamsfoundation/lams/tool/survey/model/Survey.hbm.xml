@@ -86,6 +86,8 @@
             sort="unsorted"
             order-by="sequence_id asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="survey_uid"
@@ -169,6 +171,8 @@
             cascade="all"
             sort="org.lamsfoundation.lams.learningdesign.TextSearchConditionComparator"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="content_uid"

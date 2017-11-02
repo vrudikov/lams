@@ -91,6 +91,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="scribe_session_uid"
@@ -110,6 +112,8 @@
             cascade="all-delete-orphan"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="scribe_session_uid"

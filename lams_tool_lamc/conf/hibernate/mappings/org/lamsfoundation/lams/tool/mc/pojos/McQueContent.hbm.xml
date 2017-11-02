@@ -91,6 +91,8 @@
 		cascade="all"
 		order-by="displayOrder"
     >
+    <cache usage="transactional" />
+
         <key>
             <column name="mc_que_content_id" />
         </key>

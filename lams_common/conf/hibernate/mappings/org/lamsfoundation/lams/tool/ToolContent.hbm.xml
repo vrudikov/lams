@@ -46,6 +46,8 @@
         inverse="true"
 		cascade="none"
     >
+    <cache usage="transactional" />
+
         
         <key>
             <column name="tool_content_id" />

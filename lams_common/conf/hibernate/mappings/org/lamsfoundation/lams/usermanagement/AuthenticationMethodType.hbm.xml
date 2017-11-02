@@ -51,6 +51,8 @@
         inverse="true"
 		cascade="none"
     >
+    <cache usage="transactional" />
+
         
         <key>
             <column name="authentication_method_type_id" />

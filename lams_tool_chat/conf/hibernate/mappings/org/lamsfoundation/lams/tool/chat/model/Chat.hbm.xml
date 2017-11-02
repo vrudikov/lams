@@ -132,6 +132,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="chat_uid"
@@ -176,6 +178,8 @@
             cascade="all"
             sort="org.lamsfoundation.lams.learningdesign.TextSearchConditionComparator"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="content_uid"

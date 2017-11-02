@@ -87,6 +87,8 @@
             order-by="uid asc"
             fetch="join"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="content_uid"

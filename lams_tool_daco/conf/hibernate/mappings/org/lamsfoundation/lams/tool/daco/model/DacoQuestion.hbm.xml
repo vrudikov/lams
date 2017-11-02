@@ -110,6 +110,8 @@
             sort="unsorted"
             order-by="sequence_num asc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="question_uid"

@@ -113,6 +113,8 @@
 		<!-- bi-directional one-to-many association to UserOrganisation -->
 		<set name="userOrganisations" lazy="true" inverse="true"
 			cascade="all-delete-orphan">
+    <cache usage="transactional" />
+
 			
 
 			<key>
@@ -124,6 +126,8 @@
 		<!-- bi-directional one-to-many association to WorkspaceFolder -->
 		<set name="childOrganisations" lazy="true" inverse="true"
 			cascade="all-delete-orphan">
+    <cache usage="transactional" />
+
 			
 
 			
@@ -140,6 +144,8 @@
 		</many-to-one>
 		<!-- bi-directional one-to-many association to Lesson -->
 		<set name="lessons" lazy="extra" inverse="true" cascade="none">
+    <cache usage="transactional" />
+
 			
 			<key>
 				<column name="organisation_id" />
@@ -149,6 +155,8 @@
 		
 		<!-- bi-directional one-to-many association to WorkspaceFolder -->
 		<set cascade="all-delete-orphan" inverse="true" lazy="true" name="workspaceFolders" sort="unsorted">
+    <cache usage="transactional" />
+
 			<key>
 				<column name="organisation_id" />
 			</key>

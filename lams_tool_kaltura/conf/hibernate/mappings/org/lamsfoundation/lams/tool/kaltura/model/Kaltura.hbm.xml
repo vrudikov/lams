@@ -183,6 +183,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="kaltura_uid"
@@ -203,6 +205,8 @@
             sort="unsorted"
             order-by="create_date desc"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="kaltura_uid"

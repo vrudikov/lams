@@ -141,6 +141,8 @@
             cascade="all-delete-orphan"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="message_uid"
@@ -204,6 +206,8 @@
             cascade="none"
             sort="unsorted"
         >
+    <cache usage="transactional" />
+
 
             <key
                 column="authored_parent_uid"

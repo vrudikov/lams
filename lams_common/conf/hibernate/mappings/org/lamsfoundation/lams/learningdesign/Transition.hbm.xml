@@ -95,6 +95,8 @@
     
 	<subclass name="org.lamsfoundation.lams.learningdesign.DataTransition" discriminator-value="1">		    
 	    <set name="dataFlowObjects" lazy="true" inverse="true" cascade="all">
+    <cache usage="transactional" />
+
 	        
 	        <key><column name="transition_id" /></key>
 	        <one-to-many class="org.lamsfoundation.lams.learningdesign.DataFlowObject"/>

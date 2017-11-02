@@ -97,6 +97,8 @@
 		<!-- bi-directional one-to-many association to LearnerProgress -->
 		<set name="learnerProgresses" lazy="true" inverse="true"
 			cascade="all-delete-orphan">
+    <cache usage="transactional" />
+
 			<key>
 				<column name="lesson_id" />
 			</key>
@@ -107,6 +109,8 @@
 		<!-- bi-directional one-to-many association to gradebookUserLessons -->
 		<set name="gradebookUserLessons" lazy="true" inverse="true"
 			cascade="all-delete-orphan">
+    <cache usage="transactional" />
+
 			<key>
 				<column name="lesson_id" />
 			</key>
@@ -132,6 +136,8 @@
 		</many-to-one>
 		
 		<set name="precedingLessons" table="lams_lesson_dependency" cascade="all" >
+    <cache usage="transactional" />
+
             <key>
                 <column name="lesson_id" not-null="true" />
             </key>
@@ -141,6 +147,8 @@
         </set>
         
        <set name="succeedingLessons" table="lams_lesson_dependency" cascade="all" >
+    <cache usage="transactional" />
+
             <key>
                 <column name="preceding_lesson_id" not-null="true" />
             </key>
