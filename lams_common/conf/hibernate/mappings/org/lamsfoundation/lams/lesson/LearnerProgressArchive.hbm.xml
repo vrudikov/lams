@@ -27,12 +27,20 @@
 			column="finish_date_time" />
 		
 		<map name="attemptedActivities" lazy="false" batch-size="20" cascade="none" table="lams_progress_attempted_archive">
+
+		
+		    <cache usage="transactional" />
+
 			<key column="learner_progress_id"/>
 			<index-many-to-many column="activity_id" class="org.lamsfoundation.lams.learningdesign.Activity"/>
 			<element column="start_date_time" type="java.util.Date"/>
 		</map>
 
 		<map name="completedActivities" lazy="false" batch-size="20" cascade="none" table="lams_progress_completed_archive">
+
+
+		    <cache usage="transactional" />
+
 			<key column="learner_progress_id"/>
 			<index-many-to-many column="activity_id" class="org.lamsfoundation.lams.learningdesign.Activity"/>
 			
