@@ -68,28 +68,6 @@
             column="init_item"
         />
 
-        <set
-            name="itemInstructions"
-            lazy="false"
-            inverse="false"
-            cascade="all-delete-orphan"
-            sort="unsorted"
-            order-by="sequence_id asc"
-        >
-    <cache usage="transactional" />
-
-
-            <key
-                column="item_uid"
-            >
-            </key>
-
-            <one-to-many
-                  class="org.lamsfoundation.lams.tool.commonCartridge.model.CommonCartridgeItemInstruction"
-            />
-
-        </set>
-
         <property
             name="organizationXml"
             type="java.lang.String"

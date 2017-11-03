@@ -24,9 +24,6 @@
 package org.lamsfoundation.lams.tool.commonCartridge.model;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 
 import org.apache.log4j.Logger;
 
@@ -71,8 +68,6 @@ public class CommonCartridgeItem implements Cloneable {
 
     private String fileType;
 
-    private Set itemInstructions;
-
     private boolean isHide;
     private boolean isCreateByAuthor;
 
@@ -88,17 +83,6 @@ public class CommonCartridgeItem implements Cloneable {
 	CommonCartridgeItem obj = null;
 	try {
 	    obj = (CommonCartridgeItem) super.clone();
-	    // clone attachment
-	    if (itemInstructions != null) {
-		Iterator iter = itemInstructions.iterator();
-		Set set = new HashSet();
-		while (iter.hasNext()) {
-		    CommonCartridgeItemInstruction instruct = (CommonCartridgeItemInstruction) iter.next();
-		    CommonCartridgeItemInstruction newInsruct = (CommonCartridgeItemInstruction) instruct.clone();
-		    set.add(newInsruct);
-		}
-		obj.itemInstructions = set;
-	    }
 	    obj.setUid(null);
 	    // clone ReourceUser as well
 	    if (this.createBy != null) {
@@ -190,21 +174,6 @@ public class CommonCartridgeItem implements Cloneable {
 
     public void setInitialItem(String initialItem) {
 	this.initialItem = initialItem;
-    }
-
-    /**
-     *
-     *
-     *
-     *
-     * @return
-     */
-    public Set getItemInstructions() {
-	return itemInstructions;
-    }
-
-    public void setItemInstructions(Set itemInstructions) {
-	this.itemInstructions = itemInstructions;
     }
 
     /**

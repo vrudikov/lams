@@ -80,7 +80,6 @@
 
         <set
             name="subscriptions"
-            lazy="false"
             cascade="all-delete-orphan"
             sort="unsorted"
             fetch="join"

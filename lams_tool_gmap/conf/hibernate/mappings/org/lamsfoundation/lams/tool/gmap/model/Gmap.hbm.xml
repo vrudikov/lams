@@ -130,7 +130,6 @@
 
         <set
             name="gmapMarkers"
-            lazy="false"
             cascade="all-delete-orphan"
             sort="unsorted"
         >

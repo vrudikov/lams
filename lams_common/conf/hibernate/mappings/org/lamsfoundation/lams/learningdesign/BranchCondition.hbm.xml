@@ -53,6 +53,8 @@
             
     </property>
     
+        <!-- Since this is just one element and it is often used in non-transactional methods (Actions),
+    	 it should probably stay non-lazy -->
      <joined-subclass  name="org.lamsfoundation.lams.learningdesign.TextSearchCondition" table="lams_text_search_condition" lazy="false">
      	
      	

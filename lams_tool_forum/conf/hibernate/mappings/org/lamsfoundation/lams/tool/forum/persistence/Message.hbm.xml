@@ -136,7 +136,6 @@
         <set
             name="attachments"
             table="ATTACHMENT"
-            lazy="false"
             inverse="false"
             cascade="all-delete-orphan"
             sort="unsorted"
@@ -201,7 +200,6 @@
 
         <set
             name="sessionClones"
-            lazy="false"
             inverse="false"
             cascade="none"
             sort="unsorted"

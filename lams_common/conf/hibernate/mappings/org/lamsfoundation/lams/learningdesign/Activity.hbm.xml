@@ -196,7 +196,7 @@
                  	<column name="system_tool_id" not-null="false"/>
                  </many-to-one>                 
 
-				<property name="createGroupingUIID" type="java.lang.Integer" column="create_grouping_ui_id" length="11" lazy="false">
+				<property name="createGroupingUIID" type="java.lang.Integer" column="create_grouping_ui_id" length="11">
 				            
 				</property>
 								
@@ -259,6 +259,9 @@
 	    
 	    <!-- bi-directional one-to-many association to Activity. Don't use all-delete-orphan as the child activity may be removed -->
 	    <!-- from this relationship but not from the database (e.g. moving from an optional activity to the main level in the design -->
+	    <!-- Having it non-lazy might be the best idea. It is often iterated in non-transaction methods (Actions),
+	         so we would have to write code to fetch the collection contents anyway. 
+	    	 Also it is cached and pretty much immutable, so it should not hit the DB very often.  -->
 	    <set name="activities" lazy="false" inverse="true" cascade="save-update" sort="org.lamsfoundation.lams.learningdesign.ActivityOrderComparator" >
     <cache usage="transactional" />
 
@@ -312,7 +315,7 @@
 				
 
                  <!-- uni-directional many-to-one association to System Tool -->
-                 <many-to-one name="systemTool" class="org.lamsfoundation.lams.tool.SystemTool" lazy="false" >
+                 <many-to-one name="systemTool" class="org.lamsfoundation.lams.tool.SystemTool">
                  	<column name="system_tool_id" not-null="false"/>
                  </many-to-one>                 
 
@@ -332,7 +335,7 @@
 							
 	  						
 	             <!-- uni-directional many-to-one association to System Tool -->
-	             <many-to-one name="systemTool" class="org.lamsfoundation.lams.tool.SystemTool" lazy="false" >
+	             <many-to-one name="systemTool" class="org.lamsfoundation.lams.tool.SystemTool" >
 	             	<column name="system_tool_id" not-null="false"/>
 	             </many-to-one>
 
@@ -368,7 +371,7 @@
 				</property>
 				
                 <!-- uni-directional many-to-one association to System Tool -->
-                <many-to-one name="systemTool" class="org.lamsfoundation.lams.tool.SystemTool" lazy="false" >
+                <many-to-one name="systemTool" class="org.lamsfoundation.lams.tool.SystemTool" >
                 	<column name="system_tool_id" not-null="false"/>
                 </many-to-one>                    
 		 	</subclass>	
@@ -376,5 +379,3 @@
 
 </class>
 </hibernate-mapping>
-
-    
