@@ -90,9 +90,6 @@ public class Tool implements Serializable {
     private Set activities;
 
     /** persistent field */
-    private Set<ExtServerToolAdapterMap> mappedServers;
-
-    /** persistent field */
     private Integer groupingSupportTypeId;
 
     /** persistent field */
@@ -152,7 +149,6 @@ public class Tool implements Serializable {
 	this.languageFile = languageFile;
 	this.supportsOutputs = supportsOutputs;
 	this.extLmsId = extLmsId;
-	this.mappedServers = new HashSet<ExtServerToolAdapterMap>();
     }
 
     /** default constructor */
@@ -176,7 +172,6 @@ public class Tool implements Serializable {
 	this.createDateTime = createDateTime;
 	this.toolIdentifier = toolIdentifier;
 	this.toolVersion = toolVersion;
-	this.mappedServers = new HashSet<ExtServerToolAdapterMap>();
     }
 
     public Long getToolId() {
@@ -436,9 +431,9 @@ public class Tool implements Serializable {
 
     public IToolVO createBasicToolVO() {
 	IToolVO vo = new BasicToolVO(toolId, supportsGrouping, learnerUrl, learnerPreviewUrl, learnerProgressUrl,
-		authorUrl, monitorUrl, helpUrl, defaultToolContentId, learningLibraryId, toolSignature, toolDisplayName, description,
-		serviceName, createDateTime, groupingSupportTypeId, toolIdentifier, toolVersion, languageFile,
-		extLmsId);
+		authorUrl, monitorUrl, helpUrl, defaultToolContentId, learningLibraryId, toolSignature, toolDisplayName,
+		description, serviceName, createDateTime, groupingSupportTypeId, toolIdentifier, toolVersion,
+		languageFile, extLmsId);
 	return vo;
     }
 
@@ -448,13 +443,5 @@ public class Tool implements Serializable {
 
     public void setPedagogicalPlannerUrl(String pedagogicalPlannerUrl) {
 	this.pedagogicalPlannerUrl = pedagogicalPlannerUrl;
-    }
-
-    public Set<ExtServerToolAdapterMap> getMappedServers() {
-	return mappedServers;
-    }
-
-    public void setMappedServers(Set<ExtServerToolAdapterMap> mappedServers) {
-	this.mappedServers = mappedServers;
     }
 }
