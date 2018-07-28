@@ -83,6 +83,30 @@
 	<form-property name="passwordTab2" type="java.lang.String" />
 	<form-property name="courseKeyTab2" type="java.lang.String" />
 </form-bean>
+<form-bean name="DemoSignupForm" type="org.apache.struts.action.DynaActionForm">
+	<form-property name="password" type="java.lang.String" />
+	<form-property name="confirmPassword" type="java.lang.String" />
+	<form-property name="firstName" type="java.lang.String" />
+	<form-property name="lastName" type="java.lang.String" />
+	<form-property name="email" type="java.lang.String" />
+	<form-property name="country" type="java.lang.String" />
+	<form-property name="localeId" type="java.lang.Integer" />
+	<form-property name="usernameTab2" type="java.lang.String" />
+	<form-property name="passwordTab2" type="java.lang.String" />
+	<form-property name="courseKeyTab2" type="java.lang.String" />
+	<form-property name="firstName1" type="java.lang.String" />
+	<form-property name="lastName1" type="java.lang.String" />
+	<form-property name="firstName2" type="java.lang.String" />
+	<form-property name="lastName2" type="java.lang.String" />
+	<form-property name="firstName3" type="java.lang.String" />
+	<form-property name="lastName3" type="java.lang.String" />
+	<form-property name="firstName4" type="java.lang.String" />
+	<form-property name="lastName4" type="java.lang.String" />
+	<form-property name="firstName5" type="java.lang.String" />
+	<form-property name="lastName5" type="java.lang.String" />
+	<form-property name="firstName6" type="java.lang.String" />
+	<form-property name="lastName6" type="java.lang.String" />
+</form-bean>
 
   </form-beans>
 
@@ -303,6 +327,42 @@
         redirect="false"
       />
     </action>
+    <action
+      path="/signup/demoSignup"
+      type="org.lamsfoundation.lams.web.action.DemoSignupAction"
+      name="DemoSignupForm"
+      scope="request"
+      parameter="method"
+      unknown="false"
+      validate="false"
+    >
+      <forward
+        name="signup"
+        path="/demo/signup.jsp"
+        redirect="false"
+      />
+      <forward
+        name="emailVerificationResult"
+        path="/demo/emailVerificationResult.jsp"
+        redirect="false"
+      />
+      <forward
+        name="addLearners"
+        path="/demo/addLearners.jsp"
+        redirect="false"
+      />
+      <forward
+        name="error"
+        path=".error"
+        redirect="false"
+      />
+      <forward
+        name="message"
+        path=".message"
+        redirect="false"
+      />
+    </action>   
+    
     <action
       path="/notification"
       type="org.lamsfoundation.lams.web.NotificationAction"
